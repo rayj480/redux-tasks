@@ -1,33 +1,21 @@
-import 'babel-polyfill';
-
-import 'ts-helpers';
-
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import * as ReactDom from 'react-dom';
+import App from './component/App';
+let Provider = require('react-redux').Provider;
+import {createStore} from 'redux'; 
+import {task} from './reducers/task';
 
-const { Provider } = require('react-redux');
-const { Router, browserHistory } = require('react-router');
-const { syncHistoryWithStore } = require('react-router-redux');
+const initialState = {
+    tasklist: [
+        {title: 'tache 2', completed: false},
+        {title: 'tache 3', completed: true},
+        {title: 'tache 4', completed: true},
+        {title: 'tache 5', completed: false}
+    ]
+};
 
-import routes from './store/routes';
-import configureStore from './store/configure-store';
+let store = createStore(task, initialState);
 
-import './styles/index.css';
-
-declare const __TEST__: boolean;
-
-const store = configureStore({});
-const history = syncHistoryWithStore(browserHistory, store);
-
-if (!__TEST__) {
-  ReactDOM.render(
-    <div>
-      <Provider store={ store }>
-        <Router history={ history }>
-          { routes }
-        </Router>
-      </Provider>
-    </div>,
-    document.getElementById('root')
-  );
-}
+ReactDom.render(<Provider store={store}>
+    <App />
+</Provider>, document.getElementById('root'));
