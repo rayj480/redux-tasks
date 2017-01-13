@@ -1,2 +1,5 @@
-@import url('./bootstrap/dist/css/bootstrap.css');
+@import url('./bootstrap/bootstrap.css');
 @import url('./fabric-ui-core/fabric.min.css');
+
+@import url('./custom-style.css');
+

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {IAppProps} from '../interfaces';
+import {TrdHeader} from './TrdHeader';
 
 export default class App extends React.Component<IAppProps, any> {
     constructor(props: IAppProps) {
@@ -10,7 +11,7 @@ export default class App extends React.Component<IAppProps, any> {
 
         return (
             <div>
-                Bonjour {this.props.name} !
+                <TrdHeader title="Intranet" />
             </div>
 
         );

@@ -26,12 +26,6 @@ exports.html = {
   exclude: /node_modules/,
 };
 
-// SASS
-exports.sass = {
-  test: /\.scss$/,
-  loaders: ["style-loader", "css-loader", "sass-loader"]
-};
-
 exports.css = {
   test: /\.css$/,
   loader: 'style-loader!css?-minimize!postcss',
