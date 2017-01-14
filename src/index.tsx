@@ -29,7 +29,7 @@ let initialState = {
 
 // ajouter le reducer
 let store = createStore(settingsReducer, initialState);
-console.log(store.getState());
+//console.log(store.getState());
 
 ReactDom.render(
     <Provider store={store}><App name="Jonathan" /></Provider>, 

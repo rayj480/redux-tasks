@@ -28,4 +28,4 @@ let settings = (state = [], action:any) => {
     }
 } 
 
-export const settingsReducer = combineReducers({settings});
+export let settingsReducer = combineReducers({settings});

@@ -3,10 +3,11 @@ import TrdSetSearch from '../components/TrdSetSearch';
 import {toggleSetting} from '../actions';
 const connect = require('react-redux').connect;
 
+
 export const ShowSearch = connect(
     (state) => {
         return {
-            isActivated: state.activated
+            settings: [...state.settings]
         }
     },null
 )(TrdSearchIcon);
@@ -14,8 +15,7 @@ export const ShowSearch = connect(
 export const SetSearch = connect(
     (state) => {
         return {
-            isActivated: state.activated,
-            id: state.id
+            settings: [...state.settings]
         }
     },  
     (dispatch) => {

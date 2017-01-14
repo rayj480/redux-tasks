@@ -8,5 +8,5 @@ export type SettingAction = {
 export type Setting = {
     id?: string,
     title?: string,
-    activated?: string
+    activated?: boolean
 }

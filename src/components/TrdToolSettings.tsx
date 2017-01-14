@@ -9,6 +9,7 @@ export default class TrdToolSettings extends React.Component<IToolsSettingsProps
     }
 
     render(): JSX.Element {
+        //console.log(this.props.activated);
         return (
             <div className="ms-Grid-row">
                 <div className="ms-Grid-col">
