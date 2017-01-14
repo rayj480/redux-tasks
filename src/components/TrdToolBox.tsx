@@ -46,19 +46,13 @@ export class TrdToolBox extends React.Component<ITrdToolBoxProps, any> {
             <div className="ms-Grid-row trd-toolbox">
                 <div className="ms-Grid-col ms-u-sm3">
                     <i className="ms-Icon ms-Icon--Settings ms-font-xxl trd-tool" onClick={this._openSettingsPanel.bind(this)}></i>
-                    <Panel type={PanelType.medium} isOpen={this.state.settingsIsOpen} headerText="Paramètres" onDismiss={this._closeSettingsPanel.bind(this)} >
+                    <Panel type={PanelType.smallFixedFar} isOpen={this.state.settingsIsOpen} headerText="Paramètres" onDismiss={this._closeSettingsPanel.bind(this)} >
                         <div>
                             <SetSearch />
                         </div>
                     </Panel>
                 </div>
                 <ShowSearch />
-                <div className="ms-Grid-col ms-u-sm3">
-                    <i className="ms-Icon ms-Icon--OutlookLogo ms-font-xxl trd-tool"></i>
-                </div>
-                <div className="ms-Grid-col ms-u-sm3">
-                    <i className="ms-Icon ms-Icon--Calendar ms-font-xxl trd-tool"></i>
-                </div>
             </div>
         );
     }

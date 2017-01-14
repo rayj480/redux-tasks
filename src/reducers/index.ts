@@ -4,7 +4,7 @@ import {combineReducers} from 'redux';
 
 let setting = (state:SettingAction = {}, action:any) => {
     switch (action.type) {
-        case "TOGGLE_SETTINGS":
+        case "TOGGLE_SETTING":
             if(state.id === action.id){
                 return {
                     id: state.id, 
@@ -17,11 +17,11 @@ let setting = (state:SettingAction = {}, action:any) => {
     }
 }
 
-let settings = (state = [], action:any) => {
+let settings = (state:any = [], action:any) => {
     switch (action.type) {
-        case "TOGGLE_SETTINGS":
+        case "TOGGLE_SETTING":
             return state.map((t:SettingAction) => {
-                setting(t, action);
+                return setting(t, action);
             });
         default:
             return state;

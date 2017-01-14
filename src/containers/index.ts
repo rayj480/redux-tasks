@@ -13,6 +13,7 @@ export const ShowSearch = connect(
 )(TrdSearchIcon);
 
 export const SetSearch = connect(
+    
     (state) => {
         return {
             settings: [...state.settings]

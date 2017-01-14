@@ -13,26 +13,33 @@ export class TrdSearchIcon extends React.Component<ITrdSearchIconProps, any> {
     }
 
     render(): JSX.Element {
+        // console.log(this.props.settings)
         const settings = this.props.settings.map((t) => {
             switch (t.title) {
                 case "search":
-                    return t.activated ? 
-                        <i className="ms-Icon ms-Icon--Search ms-font-xxl trd-tool"></i> : null
+                    return t.activated ? (
+                        <div className="ms-Grid-col ms-u-sm3" key={t.id}>
+                            <i className="ms-Icon ms-Icon--Search ms-font-xxl trd-tool"></i>
+                        </div>
+                    ) : null
                 case "outlook":
-                    return t.activated ? 
-                        <i className="ms-Icon ms-Icon--OutlookLogo ms-font-xxl trd-tool"></i> : null
+                    return t.activated ? (
+                        <div className="ms-Grid-col ms-u-sm3" key={t.id}>
+                            <i className="ms-Icon ms-Icon--OutlookLogo ms-font-xxl trd-tool"></i>
+                        </div>
+                    ) : null
                 case "calendar":
-                    return t.activated ? 
-                        <i className="ms-Icon ms-Icon--Calendar ms-font-xxl trd-tool"></i> : null
+                    return t.activated ? (
+                        <div className="ms-Grid-col ms-u-sm3" key={t.id}>
+                            <i className="ms-Icon ms-Icon--Calendar ms-font-xxl trd-tool"></i>
+                        </div>
+                    ) : null
                 default:
                     return null;
             }
         });
-        console.log(settings);
         return (
-            <div className="ms-Grid-col ms-u-sm3">
-                {settings}
-            </div>
+            <div>{settings}</div>
         )
     }
 }

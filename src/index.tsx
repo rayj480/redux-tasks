@@ -26,9 +26,11 @@ let initialState = {
     ]
 };
 
+const enhancer = window['devToolsExtension'] ? window['devToolsExtension']()(createStore) : createStore;
+const store = enhancer(settingsReducer, initialState);
 
 // ajouter le reducer
-let store = createStore(settingsReducer, initialState);
+// let store = createStore(settingsReducer, initialState);
 //console.log(store.getState());
 
 ReactDom.render(
