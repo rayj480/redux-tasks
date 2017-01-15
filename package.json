@@ -46,6 +46,7 @@
     "helmet": "^2.0.0",
     "http-proxy": "^1.13.2",
     "office-ui-fabric-react": "^0.87.0",
+    "sp-pnp-js": "^1.0.6",
     "winston": "^2.1.1"
   },
   "devDependencies": {
