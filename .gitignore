@@ -40,6 +40,7 @@ dist
 # Typescript-related generated files
 typings
 src/**/*.js
+!src/adal/*.js
 src/**/*.js.map
 test/**/*.js
 test/**/*.js.map
