@@ -5,6 +5,7 @@ import './styles/index.css';
 import {createStore} from 'redux'; 
 const Provider = require('react-redux').Provider;
 import {settingsReducer} from './reducers';
+var adal = require('./adal/adal-request.js');
 
 let initialState = {
     settings: [
@@ -25,6 +26,8 @@ let initialState = {
         }
     ]
 };
+
+adal.processAdalCallback();
 
 const enhancer = window['devToolsExtension'] ? window['devToolsExtension']()(createStore) : createStore;
 const store = enhancer(settingsReducer, initialState);
