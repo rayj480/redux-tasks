@@ -40,12 +40,16 @@
     "url": "https://github.com/rangle/rangle-starter/issues"
   },
   "dependencies": {
+    "adal-ts": "^0.5.9-alpha1",
     "bootstrap": "^3.3.7",
     "bootstrap-sass": "^3.3.7",
+    "expose-loader": "^0.7.1",
     "express": "^4.13.4",
     "helmet": "^2.0.0",
     "http-proxy": "^1.13.2",
+    "modular-adal-angular": "^1.0.4",
     "office-ui-fabric-react": "^0.87.0",
+    "q": "^1.4.1",
     "sp-pnp-js": "^1.0.6",
     "winston": "^2.1.1"
   },
