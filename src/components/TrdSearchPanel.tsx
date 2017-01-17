@@ -18,6 +18,14 @@ export class TrdSearchPanel extends React.Component<any, any> {
 
     private _goSearch(newValue: any):void {
         let queryText = "https://tryadeconsulting.sharepoint.com/_api/search/query?querytext='" + newValue + "'";
+        let token = fetch("https://login.microsoftonline.com/54a23889-4ae9-4748-9ef2-8c7d92cbd61f/oauth2/authorize?client_id=74b1fa8c-19d3-4102-8ad1-073fbaeb272c&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2F&response_mode=query&resource=https%3A%2F%2Ftryadeconsulting.sharepoint.com%2F&state=12345", {
+            method: 'GET', 
+            headers: {
+                "Access-Control-Allow-Origin": "http://localhost:8080"
+            }
+        }).then((response:Response) => {
+                console.log(response);
+            });
         let request = fetch(queryText, {
             method: 'GET',
             headers: {
